@@ -27,6 +27,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
     background-color: hsl(244, 38%, 16%);
+    padding-bottom: 30px;
 }
 
 #banner img {
@@ -81,7 +82,7 @@ body {
     .card {
         display: flex;
         flex-direction: row-reverse;
-        padding-left: 0;
+        padding: 0;
     }
     .about {
         flex-direction: row;
