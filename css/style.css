@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(233, 47%, 7%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: hsl(0, 0%, 100%);
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    gap: 10px;
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: hsl(244, 38%, 16%);
+}
+
+#banner img {
+    width: 100%;
+    filter: invert(0%) 
+        sepia(12%) saturate(4240%) 
+        hue-rotate(236deg) brightness(70%) 
+        contrast(91%);
+}
+
+.title span {
+    color: hsl(277, 64%, 61%);
+}
+
+.desc p {
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 2;
+    padding: 0 20px;
+}
+
+.status p {
+    color: hsla(0, 0%, 100%, 0.6);
+    text-transform: uppercase;
+    font-family: 'Lexend Deca';
+}
+
+.contents {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.about {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.status {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+@media(min-width: 576px) {
+    body {
+        text-align: left;
+    }
+    .card {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-left: 0;
+    }
+    .about {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #banner {
+        flex-basis: 55%;
+        background: url('../images/image-header-desktop.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: fixed center;
+        filter: invert(0%) 
+        sepia(12%) saturate(4240%) 
+        hue-rotate(236deg) brightness(70%) 
+        contrast(91%);
+    }
+    .desc p {
+        padding: 0;
+    }
+    
+    .contents {
+        flex-basis: 45%;
+        margin: 30px;
+        padding: 40px;
+    }
+    
+    .status {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    #banner img {
+        display: none;
+    }
+}
